@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55D1CB94-1037-4284-9BC6-6A72F450D92F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KingAlbert</RootNamespace>
+    <AssemblyName>KingAlbert</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Card.cs" />
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Koloda.cs" />
+    <Compile Include="Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player.Designer.cs">
+      <DependentUpon>Player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player.resx">
+      <DependentUpon>Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ace_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eight_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eight_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eight_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eight_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\five_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\five_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\five_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\five_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\four_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jack_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nine_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nine_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nine_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nine_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queen_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\six_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\six_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\six_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\six_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ten_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ten_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ten_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ten_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\three_trefa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two_buba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two_cherva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two_pika.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\two_trefa.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
